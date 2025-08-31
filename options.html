@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeFill Options</title>
+        <link rel="stylesheet" href="options.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <div class="header-content">
+                    <div class="logo-section">
+                        <div class="logo">
+                            <img src="icons/icon48.png" alt="CodeFill Logo">
+                        </div>
+                        <div class="brand-text">
+                            <h1>CodeFill</h1>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <div class="action-buttons">
+                            <button id="feedbackBtn" class="action-btn feedback-btn" title="Send Feedback">
+                                📝 Feedback
+                            </button>
+                            <button id="rateBtn" class="action-btn rate-btn" title="Rate Us">
+                                ⭐ Rate Us
+                            </button>
+                        </div>
+                        <div class="theme-toggle">
+                            <label class="theme-switch">
+                                <input type="checkbox" id="darkModeToggle">
+                                <span class="theme-slider">
+                                    <span class="theme-icon sun">☀️</span>
+                                    <span class="theme-icon moon">🌙</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main>
+                <div class="language-selector">
+                    <label for="languageSelect">Select Language:</label>
+                    <select id="languageSelect">
+                        <option value="cpp">C++</option>
+                        <option value="java">Java</option>
+                        <option value="python">Python</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="typescript">TypeScript</option>
+                        <option value="go">Go</option>
+                        <option value="rust">Rust</option>
+                        <option value="c">C</option>
+                        <option value="csharp">C#</option>
+                    </select>
+                </div>
+
+                <div class="template-config">
+                    <div class="template-header">
+                        <div class="enable-toggle">
+                            <label class="switch">
+                                <input type="checkbox" id="enableTemplate">
+                                <span class="slider"></span>
+                            </label>
+                            <label for="enableTemplate">Enable template for this language</label>
+                        </div>
+                    </div>
+
+                    <div class="template-editor">
+                        <label for="templateCode">Template Code:</label>
+                        <div class="editor-container">
+                            <div class="line-numbers" id="lineNumbers"></div>
+                            <textarea id="templateCode" placeholder="Enter your template code here..."
+                                spellcheck="false"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="template-actions">
+                        <button id="saveTemplate" class="btn btn-primary">Save Template</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!-- Status message positioned outside container for viewport positioning -->
+        <div class="status-message" id="statusMessage"></div>
+
+        <script src="options.js"></script>
+    </body>
+
+</html>

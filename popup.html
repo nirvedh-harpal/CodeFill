@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CodeFill</title>
+        <link rel="stylesheet" href="popup.css">
+    </head>
+
+    <body>
+        <div class="popup-container">
+            <header>
+                <div class="header-logo">
+                    <img src="icons/icon48.png" alt="CodeFill Logo">
+                </div>
+                <h1>CodeFill</h1>
+            </header>
+
+            <main>
+                <div class="status-section">
+                    <div class="status-item">
+                        <span class="status-label">Current Page:</span>
+                        <span id="currentPage" class="status-value">Not on LeetCode</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Language:</span>
+                        <span id="currentLanguage" class="status-value">Unknown</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Template:</span>
+                        <span id="templateStatus" class="status-value">Not available</span>
+                    </div>
+                </div>
+
+                <div class="auto-inject-section">
+                    <div class="setting-item">
+                        <div class="setting-info">
+                            <span class="setting-label">Auto-Inject Templates</span>
+                            <span class="setting-description">Automatically inject templates when editor loads</span>
+                        </div>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="autoInjectToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="actions-section">
+                    <button id="openOptions" class="btn btn-primary">
+                        ⚙️ Configure Templates
+                    </button>
+                </div>
+
+                <div class="info-section">
+                    <p class="info-text">
+                        Configure your code templates for different programming languages. Auto-inject can be toggled
+                        above.
+                    </p>
+                </div>
+            </main>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+
+</html>

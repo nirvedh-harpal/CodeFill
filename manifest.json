@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "CodeFill – LeetCode Autofill and Templates",
+  "version": "1.02",
+  "description": "Autofill coding templates on LeetCode. Inject snippets, save boilerplate, save time and speed up problem-solving.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["https://leetcode.com/*"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://leetcode.com/problems/*/description/",
+        "https://leetcode.com/problems/*/"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CodeFill"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
